@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 import Movie from './movie';
 
 class App extends Component {
@@ -48,13 +48,13 @@ class App extends Component {
       })
       .catch((err) => {
         this.setState({
-          error: 'Sorry, could not get movies at this time.',
+          error: 'Something went wrong. Please try a different search.',
         });
       });
   }
 
   render() {
-    // Map over all the movies
+    // Map over all the data
     const movies = this.state.movies.map((movie, i) => {
       return <Movie {...movie} key={i} />;
     });
@@ -74,9 +74,11 @@ class App extends Component {
             />
             <button type='submit'>Search</button>
           </form>
-          <div className='App_error'>{this.state.error}</div>
+          {this.state.error !== null && (
+            <div className='error'>{this.state.error}</div>
+          )}
         </div>
-        {movies}
+        <section>{movies}</section>
       </main>
     );
   }
