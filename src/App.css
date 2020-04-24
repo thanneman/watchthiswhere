@@ -9,23 +9,56 @@ body {
   font-weight: 400;
   color: #ffffff;
   line-height: 1.5;
-  background: url(https://images.unsplash.com/photo-1524985069026-dd778a71c7b4)
+  background: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba)
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-color: #000000;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 120%;
+  font-weight: 700;
+  color: #333333;
+  margin: 5px auto;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  color: #333333;
+  margin: 5px auto 0;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 110%;
+  font-weight: 400;
+  color: #e3e3e3;
+  margin: 5px auto 15px;
 }
 
 a {
-  color: #ffffff;
+  color: #7b7b7b;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
 }
 
 a:hover {
-  color: #0e60fb;
+  color: #3fbfb2;
 }
 
 .error {
@@ -46,7 +79,87 @@ main {
 }
 
 section {
-  min-height: 50px;
+  margin: 20px auto;
+}
+
+.search-form input {
+  display: block;
+  appearance: none;
+  outline: 0;
+  border: 1px solid transparent;
+  background-color: #e4e4e4;
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  transition: color 0.15s ease-in-out;
+  font-weight: 300;
+}
+
+.search-form input:hover {
+  background-color: #e4e4e4;
+}
+
+.search-form input:focus {
+  background-color: #e4e4e4;
+  color: #000000;
+}
+
+.search-form button {
+  background-color: #48dacb;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 0.15s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.search-form button:hover {
+  background-color: #3fbfb2;
+}
+
+.data {
+  background-color: #ffffff;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.data-image {
+  width: 100%;
+}
+
+.data-image img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.data-locations {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.location-card {
+  display: inline-block;
+  width: 25%;
+  vertical-align: baseline;
+  padding: 2px;
+  color: #333333;
+}
+
+.location-image {
+  width: 100%;
+}
+
+.location-image img {
+  width: 80%;
 }
 
 footer {
@@ -57,5 +170,5 @@ footer {
 .footer p {
   font-size: 13px;
   margin: 2px auto;
-  color: #22252c;
+  color: #333333;
 }

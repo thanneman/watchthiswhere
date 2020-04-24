@@ -28,8 +28,7 @@ class App extends Component {
         headers: {
           'x-rapidapi-host':
             'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com',
-          'x-rapidapi-key':
-            'f1422cfc79mshe48a33115f2c3f6p1751e8jsn6ed0415dd382',
+          'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
         },
       }
     )
@@ -40,7 +39,6 @@ class App extends Component {
         return res.json();
       })
       .then((data) => {
-        console.log(data.results);
         this.setState({
           movies: data.results,
           error: null, //reset errors
@@ -61,14 +59,15 @@ class App extends Component {
 
     return (
       <main className='App'>
-        <h1>Watch This Where?</h1>
+        <h1>WatchThisWhere</h1>
+        <p>Find out where to stream your favorite movies and tv shows.</p>
         <div className='search'>
-          <form onSubmit={(e) => this.handleSubmit(e)}>
-            <label htmlFor='search'>Search: </label>
+          <form className='search-form' onSubmit={(e) => this.handleSubmit(e)}>
             <input
               type='text'
               id='search'
               name='search'
+              placeholder='Enter Movie/Show'
               value={this.state.search}
               onChange={(e) => this.setSearch(e.target.value)}
             />
