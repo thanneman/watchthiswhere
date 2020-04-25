@@ -78,6 +78,14 @@ main {
   text-align: center;
 }
 
+.header {
+  margin: 0;
+}
+
+.logo {
+  width: 15%;
+}
+
 section {
   margin: 20px auto;
 }
@@ -89,13 +97,12 @@ section {
   border: 1px solid transparent;
   background-color: #e4e4e4;
   width: 100%;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
   display: block;
   text-align: center;
   font-size: 18px;
-  transition: color 0.15s ease-in-out;
   font-weight: 300;
 }
 
@@ -112,24 +119,25 @@ section {
   background-color: #48dacb;
   padding: 10px 15px;
   border: 1px solid transparent;
-  color: #ffffff;
-  border-radius: 3px;
+  color: #333333;
+  border-radius: 5px;
   width: 100%;
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  transition: color 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
   margin-bottom: 10px;
 }
 
 .search-form button:hover {
   background-color: #3fbfb2;
+  color: #000;
 }
 
 .data {
   background-color: #ffffff;
   margin: 10px auto;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .data-image {
@@ -163,12 +171,12 @@ section {
 }
 
 footer {
-  margin-top: 50px;
+  margin: 20px auto;
   padding: 1% 0;
 }
 
 .footer p {
-  font-size: 13px;
+  font-size: 70%;
   margin: 2px auto;
-  color: #333333;
+  color: #7b7b7b;
 }
