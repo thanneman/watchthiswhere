@@ -78,7 +78,6 @@ class App extends Component {
     let loader;
     if (this.state.error) {
       errorLoad = <div className='error'>{this.state.error}</div>;
-      //this.state.loading = false;
     } else if (loading === true) {
       loader = <LoadingSpinner />;
     }
