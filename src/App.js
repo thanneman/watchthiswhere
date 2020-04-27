@@ -92,7 +92,8 @@ class App extends Component {
         <div className='search'>
           <form className='search-form' onSubmit={(e) => this.handleSubmit(e)}>
             <input
-              type='text'
+              type='search'
+              results='3'
               id='search'
               name='search'
               placeholder='Search Movie/Show'
