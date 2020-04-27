@@ -46,11 +46,18 @@ class App extends Component {
         return res.json();
       })
       .then((data) => {
-        this.setState({
-          movies: data.results,
-          error: null, //reset errors
-          loading: false,
-        });
+        if (data.results.length === 0) {
+          this.setState({
+            error: 'Movie/Show not found. Please try a different search.',
+            loading: false,
+          });
+        } else {
+          this.setState({
+            movies: data.results,
+            error: null, //reset errors
+            loading: false,
+          });
+        }
       })
       .catch((err) => {
         this.setState({
