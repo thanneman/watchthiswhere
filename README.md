@@ -24,7 +24,7 @@ This app has one type of user; visitor
 
 <img src="/github-images/landing.png" alt="Landing Page">
 
-### **Login Page - Search**
+### **Landing Page - Search**
 
 <img src="/github-images/landing-search.png" alt="Landing Page Search">
 
