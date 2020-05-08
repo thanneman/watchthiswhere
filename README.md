@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WatchThisWhere
 
-## Available Scripts
+Find where to stream your favorite movies and tv shows.
 
-In the project directory, you can run:
+## Working Prototype
 
-### `npm start`
+[Github Repo](https://github.com/thanneman/watchthiswhere)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Live App](https://watchthiswhere.now.sh/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## User Stores
 
-### `npm test`
+This app has one type of user; visitor
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Landing Page
 
-### `npm run build`
+- As a visitor
+- I want to know where to stream a movie or tv show
+- I enter a query of the movie or tv show I'm searching for
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### **Landing Page**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="/github-images/landing.png" alt="Landing Page">
 
-### `npm run eject`
+### **Login Page - Search**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="/github-images/landing-search.png" alt="Landing Page Search">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Documentation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Utelly Endpoint
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### GET `/lookup`
 
-## Learn More
+Lookup a tv show or movie by name and retrieve its availability across supported services for a particular country || Netflix, Amazon Prime Video, Amazon Instant Video, Apple TV+, Google Play, iTunes, YouTube Premium, Disney Plus, Hulu, Atom Tickets, CBS, DC Universe, HBO, Discovery Channel, Fandango Movies, Fox, NBC, Nickelodeon.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technology
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Front-End: HTML5, CSS3, JavaScript, React.js
+- API: Utelly
+- Development Enviroment: Vercel (formerly ZEIT)
 
-### Code Splitting
+## Responsive
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+App is built to be usable on mobile devices, as well as responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
-### Analyzing the Bundle Size
+## Scripts
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Install node modules `npm install`
 
-### Making a Progressive Web App
+Run the tests `npm test`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Start the application `npm start`
