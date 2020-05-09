@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Location from './location';
+import notfound from '../images/notfound.png';
 
 class Movie extends Component {
+  addDefaultSrc(ev) {
+    ev.target.src = notfound;
+  }
+
   render() {
     // Map over all the data locations (netflix, amazon, etc)
     const locations = this.props.locations.map((location, i) => {
@@ -11,7 +16,11 @@ class Movie extends Component {
     return (
       <div className='data'>
         <div className='data-image'>
-          <img src={this.props.picture} alt={this.props.name}></img>
+          <img
+            onError={this.addDefaultSrc}
+            src={this.props.picture}
+            alt={this.props.name}
+          />
         </div>
         <h2>
           {this.props.name}{' '}

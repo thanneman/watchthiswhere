@@ -33,6 +33,7 @@ h2 {
   font-weight: 700;
   color: #333333;
   margin: 5px auto;
+  padding: 0px 5px;
 }
 
 h3 {
@@ -136,7 +137,7 @@ section {
 
 .data {
   background-color: #ffffff;
-  margin: 10px auto;
+  margin: 15px auto;
   border-radius: 6px;
 }
 
