@@ -13,28 +13,31 @@ class Movie extends Component {
       return <Location {...location} key={i} />;
     });
 
+    // Dynamic background Image
+    var imgUrl = this.props.picture;
+    var divStyle = {
+      backgroundImage: 'url(' + imgUrl + ')',
+    };
+
     return (
-      <div className='data'>
-        <div className='data-image'>
-          <img
-            onError={this.addDefaultSrc}
-            src={this.props.picture}
-            alt={this.props.name}
-          />
+      <div className='data' onError={this.addDefaultSrc} style={divStyle}>
+        <div className='data-header'>
+          <h2>{this.props.name}</h2>
+          <h3>
+            {this.props.external_ids.imdb !== null && (
+              <a
+                href={this.props.external_ids.imdb.url}
+                target='_blank'
+                rel='noopener noreferrer'>
+                IMDb &#8599;
+              </a>
+            )}
+          </h3>
         </div>
-        <h2>
-          {this.props.name}{' '}
-          {this.props.external_ids.imdb !== null && (
-            <a
-              href={this.props.external_ids.imdb.url}
-              target='_blank'
-              rel='noopener noreferrer'>
-              - IMDb
-            </a>
-          )}
-        </h2>
-        <h3>Available on:</h3>
-        <div className='data-locations'>{locations}</div>
+        <div className='data-lower'>
+          <h3>Available on:</h3>
+          <div className='data-locations'>{locations}</div>
+        </div>
       </div>
     );
   }

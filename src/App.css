@@ -29,19 +29,22 @@ h1 {
 
 h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 120%;
+  font-size: 140%;
   font-weight: 700;
-  color: #333333;
-  margin: 5px auto;
-  padding: 0px 5px;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: left;
+  text-shadow: 0px 0px 6px #000000;
 }
 
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 100%;
+  font-size: 90%;
   font-weight: 400;
-  color: #333333;
-  margin: 5px auto 0;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: left;
+  text-shadow: 0px 0px 6px #000000;
 }
 
 p {
@@ -53,13 +56,14 @@ p {
 }
 
 a {
-  color: #7b7b7b;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.15s ease-in-out;
+  text-shadow: 0px 0px 6px #000000;
 }
 
 a:hover {
-  color: #3fbfb2;
+  color: #242424;
 }
 
 .error {
@@ -136,39 +140,59 @@ section {
 }
 
 .data {
-  background-color: #ffffff;
-  margin: 15px auto;
-  border-radius: 6px;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  background-color: #999999 !important;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #000000;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.data-image {
+.data-header {
+  position: absolute;
   width: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
 }
 
-.data-image img {
+.data-lower {
+  position: absolute;
   width: 100%;
-  border-radius: 5px 5px 0 0;
+  padding: 0 10px 10px 10px;
+  bottom: 0;
+  left: 0;
 }
 
 .data-locations {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.location-card {
-  display: inline-block;
-  width: 25%;
-  vertical-align: baseline;
-  padding: 2px;
-  color: #333333;
+.location-btn {
+  font-size: 80%;
+  color: #1a1a1a;
+  padding: 5px 10px;
+  margin: 5px 5px 0px 0px;
+  float: left;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-shadow: none;
+  box-shadow: 0px 0px 4px #333;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
 }
 
-.location-image {
-  width: 100%;
-}
-
-.location-image img {
-  width: 80%;
+.location-btn:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 footer {
@@ -180,4 +204,34 @@ footer {
   font-size: 70%;
   margin: 2px auto;
   color: #7b7b7b;
+}
+
+.footer a {
+  color: #7b7b7b;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 160%;
+  }
+
+  h3 {
+    font-size: 110%;
+  }
+
+  .data-header {
+    padding: 20px;
+  }
+
+  .data-lower {
+    padding: 0 20px 20px 20px;
+  }
+
+  .location-btn {
+    font-size: 90%;
+  }
 }

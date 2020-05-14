@@ -2,12 +2,14 @@ import React from 'react';
 
 export default function Location(props) {
   return (
-    <div className='location-card'>
-      <div className='location-image'>
-        <a href={props.url} target='_blank' rel='noopener noreferrer'>
-          <img src={props.icon} alt={props.name} />
-        </a>
-      </div>
-    </div>
+    <>
+      <a
+        className='location-btn'
+        href={props.url}
+        target='_blank'
+        rel='noopener noreferrer'>
+        {props.display_name} &#8599;
+      </a>
+    </>
   );
 }
