@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Location from './location';
 import notfound from '../images/notfound.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Movie extends Component {
   addDefaultSrc(ev) {
@@ -29,7 +31,7 @@ class Movie extends Component {
                 href={this.props.external_ids.imdb.url}
                 target='_blank'
                 rel='noopener noreferrer'>
-                IMDb &#8599;
+                IMDb <FontAwesomeIcon icon={faExternalLinkAlt} size='sm' />
               </a>
             )}
           </h3>
