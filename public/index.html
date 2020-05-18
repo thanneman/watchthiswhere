@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>WatchThisWhere</title>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Find where to stream your favorite movies and tv shows with WatchThisWhere."
-    />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>WatchThisWhere</title>
+    <meta
+      name="description"
+      content="Find where to stream your favorite movies and shows with WatchThisWhere."
+    />
+    <meta
+      name="keywords"
+      content="Watch, Stream, Netflix, Hulu, Apple TV+, WatchThisWhere, find movies online, find shows online, stream movies, stream shows"
+    />
+    <meta name="author" content="Travis Hanneman" />
+    <meta property="og:title" content="WatchThisWhere" />
+    <meta
+      property="og:description"
+      content="Find where to stream your favorite movies and shows with WatchThisWhere."
+    />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://live.staticflickr.com/65535/49911138207_e3160d2c20_z.jpg"
+    />
+    <meta property="og:url" content="https://watchthiswhere.online/" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-161739227-2"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161739227-2');
+  </script>
 </html>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movie from './components/movie';
-// import ValidationError from './components/validation-error';
 import LoadingSpinner from './components/LoadingSpinner';
 import Footer from './components/footer';
 import logo from './images/logo.png';
@@ -74,14 +73,6 @@ class App extends Component {
     }
   }
 
-  // Validate user search query
-  // validateSearch() {
-  //   const usersearch = this.state.search.value.trim();
-  //   if (usersearch.length === 0) {
-  //     return 'Please enter a movie or show';
-  //   }
-  // }
-
   render() {
     // Map over all the data
     const movies = this.state.movies.map((movie, i) => {
@@ -102,7 +93,7 @@ class App extends Component {
         <header>
           <img className='logo' src={logo} alt='WatchThisWhere Logo' />
           <h1>WatchThisWhere</h1>
-          <p>Find where to stream your favorite movies and tv shows.</p>
+          <p>Find where to stream your favorite movies and shows.</p>
         </header>
         <div className='search'>
           <form className='search-form' onSubmit={(e) => this.handleSubmit(e)}>
@@ -116,9 +107,6 @@ class App extends Component {
             />
             <button type='submit'>Search</button>
           </form>
-          {/* {this.state.search.touched && (
-            <ValidationError message={this.validateSearch()} />
-          )} */}
           {loader}
           {errorLoad}
         </div>
