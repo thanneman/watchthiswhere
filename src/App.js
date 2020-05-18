@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movie from './components/movie';
-import ValidationError from './components/validation-error';
+// import ValidationError from './components/validation-error';
 import LoadingSpinner from './components/LoadingSpinner';
 import Footer from './components/footer';
 import logo from './images/logo.png';
@@ -28,51 +28,59 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({ loading: true });
-    fetch(
-      `https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=${this.state.search.value}&country=us`,
-      {
-        method: 'GET',
-        headers: {
-          'x-rapidapi-host':
-            'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com',
-          'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
-        },
-      }
-    )
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        if (data.results.length === 0) {
-          this.setState({
-            error: 'Movie/Show not found. Please try a different search.',
-            loading: false,
-          });
-        } else {
-          this.setState({
-            movies: data.results,
-            error: null, //reset errors
-            loading: false,
-          });
-        }
-      })
-      .catch((err) => {
-        this.setState({
-          error: 'Something went wrong. Please try a different search.',
-        });
+    const usersearch = this.state.search.value.trim();
+    if (usersearch.length === 0) {
+      this.setState({
+        error: 'Please enter a movie or show',
+        loading: false,
       });
+    } else {
+      fetch(
+        `https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=${this.state.search.value}&country=us`,
+        {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-host':
+              'utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com',
+            'x-rapidapi-key': `${process.env.REACT_APP_API_KEY}`,
+          },
+        }
+      )
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(res.statusText);
+          }
+          return res.json();
+        })
+        .then((data) => {
+          if (data.results.length === 0) {
+            this.setState({
+              error: 'Movie/Show not found. Please try a different search.',
+              loading: false,
+            });
+          } else {
+            this.setState({
+              movies: data.results,
+              error: null, //reset errors
+              loading: false,
+            });
+          }
+        })
+        .catch((err) => {
+          this.setState({
+            error: 'Something went wrong. Please try a different search.',
+          });
+        });
+    }
   }
 
   // Validate user search query
-  validateSearch() {
-    const usersearch = this.state.search.value.trim();
-    if (usersearch.length === 0) {
-      return 'Please enter a movie or show';
-    }
-  }
+  // validateSearch() {
+  //   const usersearch = this.state.search.value.trim();
+  //   if (usersearch.length === 0) {
+  //     return 'Please enter a movie or show';
+  //   }
+  // }
 
   render() {
     // Map over all the data
@@ -108,9 +116,9 @@ class App extends Component {
             />
             <button type='submit'>Search</button>
           </form>
-          {this.state.search.touched && (
+          {/* {this.state.search.touched && (
             <ValidationError message={this.validateSearch()} />
-          )}
+          )} */}
           {loader}
           {errorLoad}
         </div>
