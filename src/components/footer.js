@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
+  const date = new Date();
   return (
     <footer className='footer'>
       <p>
-        &copy;2020 <FontAwesomeIcon icon={faCode} size='sm' /> by{' '}
+        &copy;{date.getFullYear()} <FontAwesomeIcon icon={faCode} size='sm' />{' '}
+        by{' '}
         <a
           href='http://thanneman.com/'
           target='_blank'
