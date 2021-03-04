@@ -89,6 +89,11 @@ main {
 
 .logo {
   width: 15%;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 section {

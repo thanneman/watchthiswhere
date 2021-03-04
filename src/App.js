@@ -91,7 +91,9 @@ class App extends Component {
     return (
       <main className='App'>
         <header>
-          <img className='logo' src={logo} alt='WatchThisWhere Logo' />
+          <a href="index.html">
+            <img className='logo' src={logo} alt='WatchThisWhere Logo' />
+          </a>
           <h1>WatchThisWhere</h1>
           <p>Find where to stream your favorite movies and shows.</p>
         </header>
