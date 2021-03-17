@@ -91,7 +91,7 @@ class App extends Component {
     return (
       <main className='App'>
         <header>
-          <a href="index.html">
+          <a href="/">
             <img className='logo' src={logo} alt='WatchThisWhere Logo' />
           </a>
           <h1>WatchThisWhere</h1>

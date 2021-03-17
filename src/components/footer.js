@@ -1,14 +1,11 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
-  const date = new Date();
+  const date = new Date().getFullYear();
   return (
     <footer className='footer'>
       <p>
-        &copy;{date.getFullYear()} <FontAwesomeIcon icon={faCode} size='sm' />{' '}
-        by{' '}
+        &copy;2020-{date}{' '}
         <a
           href='http://thanneman.com/'
           target='_blank'
@@ -17,7 +14,7 @@ export default function Footer() {
         </a>
       </p>
       <p>
-        Icon created by{' '}
+        Icon by{' '}
         <a
           href='https://thenounproject.com/st.uswatun10/'
           target='_blank'
