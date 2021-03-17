@@ -52,8 +52,9 @@ class App extends Component {
           return res.json();
         })
         .then((data) => {
-          if (data.results.length === 0) {
+          if (data.results.length === undefined) {
             this.setState({
+              movies: [],
               error: 'Movie/Show not found. Please try a different search.',
               loading: false,
             });
